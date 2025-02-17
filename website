@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة العقبة اللوجستية</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+ 
+        body {
+            background-color: #f8f9fa;
+        }
+ 
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+ 
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            background-color: #34495e;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+ 
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+ 
+        .nav a:hover {
+            background-color: #3d566e;
+            transform: translateY(-2px);
+        }
+ 
+        .hero {
+            position: relative;
+            height: 70vh;
+            overflow: hidden;
+        }
+ 
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+ 
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+ 
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+ 
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin: 2rem 0;
+        }
+ 
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+ 
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+ 
+        .gallery-img:hover {
+            transform: scale(1.03);
+        }
+ 
+        .stakeholders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+ 
+        .stakeholder-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+ 
+        .stakeholder-card:hover {
+            transform: translateY(-5px);
+        }
+ 
+        .stakeholder-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            border: 3px solid #3498db;
+        }
+ 
+        .contact-form {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+ 
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.8rem 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+ 
+        input:focus, textarea:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+ 
+        button {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+ 
+        button:hover {
+            transform: scale(1.05);
+        }
+ 
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+ 
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+           
+            .hero {
+                height: 50vh;
+            }
+           
+            .section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>شركة العقبة اللوجستية</h1>
+        <p>الريادة في إدارة وتوزيع الألعاب منذ 2010</p>
+    </header>
+ 
+    <nav class="nav">
+        <a href="#about">عن الشركة</a>
+        <a href="#solutions">حلولنا</a>
+        <a href="#stakeholders">المعنيون</a>
+        <a href="#contact">اتصل بنا</a>
+    </nav>
+ 
+    <div class="hero">
+        <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+             alt="ميناء العقبة"
+             class="hero-img">
+        <div class="hero-content">
+            <h2>نظام إدارة المخزون الذكي</h2>
+            <p>دمج التكنولوجيا الحديثة مع الخبرة اللوجستية</p>
+        </div>
+    </div>
+ 
+    <section class="section" id="about">
+        <div class="card">
+            <h2>عن شركتنا</h2>
+            <div class="image-gallery">
+                <img src="https://d26e3f10zvrezp.cloudfront.net/Gallery/fc290be7-4553-4c6d-842c-1ee6df907952-1024x1024.webp"
+                     alt="مستودعاتنا في العقبة"
+                     class="gallery-img">
+                <img src="https://www.annajah.net/resources/thumbs/article_photos/article-JF-E0xEXa11i.jpg_729x410.jpg"
+                     alt="فريق العمل"
+                     class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                     alt="نظام التتبع"
+                     class="gallery-img">
+            </div>
+            <p>تأسست شركة العقبة اللوجستية عام 2010 كرائدة في مجال الخدمات اللوجستية المتخصصة في قطاع الألعاب،
+                تتمتع بموقع استراتيجي في منطقة العقبة الاقتصادية الخاصة.</p>
+        </div>
+    </section>
+ 
+    <section class="section" id="solutions">
+        <div class="card">
+            <h2>حلولنا التقنية</h2>
+            <div class="stakeholders-grid">
+                <div class="stakeholder-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2331/2331966.png"
+                         alt="النظام السحابي">
+                    <h3>النظام السحابي المتكامل</h3>
+                    <p>إدارة المخزون في الوقت الحقيقي عبر منصة آمنة</p>
+                </div>
+                <div class="stakeholder-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1534/1534959.png"
+                         alt="التحليلات">
+                    <h3>الذكاء التحليلي</h3>
+                    <p>تقارير أداء مفصلة ولوحات تحكم تفاعلية</p>
+                </div>
+                <div class="stakeholder-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1534/1534996.png"
+                         alt="التكامل">
+                    <h3>التكامل مع الأنظمة</h3>
+                    <p>ربط سلس مع أنظمة ERP وCRM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section class="section" id="stakeholders">
+        <div class="card">
+            <h2>الأطراف المعنية</h2>
+            <div class="stakeholders-grid">
+                <div class="stakeholder-card">
+                    <img src="https://images.unsplash.com/photo-1560264280-88b68371db39?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                         alt="فريق الإدارة">
+                    <h3>فريق الإدارة</h3>
+                    <p>قيادة استراتيجية وتخطيط طويل المدى</p>
+                </div>
+                <div class="stakeholder-card">
+                    <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                         alt="فريق التكنولوجيا">
+                    <h3>قسم تكنولوجيا المعلومات</h3>
+                    <p>تنفيذ وصيانة البنية التحتية التقنية</p>
+                </div>
+                <div class="stakeholder-card">
+                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                         alt="فريق المستودعات">
+                    <h3>فريق المستودعات</h3>
+                    <p>التشغيل اليومي وإدارة العمليات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section class="section" id="contact">
+        <div class="card">
+            <div class="contact-form">
+                <h2>تواصل معنا</h2>
+                <form id="contactForm">
+                    <input type="text" placeholder="الاسم الكامل" required>
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <textarea rows="6" placeholder="رسالتك..." required></textarea>
+                    <button type="submit">إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+ 
+    <footer class="footer">
+        <p>© 2023 شركة العقبة اللوجستية. جميع الحقوق محفوظة.</p>
+        <p>العقبة الاقتصادية الخاصة - الأردن | هاتف: +962 6 555 1234</p>
+    </footer>
+ 
+    <script>
+        // معالجة إرسال النموذج
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('تم استلام رسالتك بنجاح، سيتم الرد خلال 24 ساعة عمل.');
+            this.reset();
+        });
+ 
+        // التنقل السلس
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+ 
+        // Lightbox للصور
+        document.querySelectorAll('.gallery-img').forEach(image => {
+            image.addEventListener('click', () => {
+                const overlay = document.createElement('div');
+                overlay.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,0.95);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 1000;
+                    cursor: zoom-out;
+                `;
+ 
+                const imgElement = document.createElement('img');
+                imgElement.src = image.src;
+                imgElement.alt = image.alt;
+                imgElement.style.maxWidth = '90%';
+                imgElement.style.maxHeight = '90%';
+                imgElement.style.borderRadius = '10px';
+ 
+                overlay.appendChild(imgElement);
+                document.body.appendChild(overlay);
+ 
+                overlay.addEventListener('click', () => overlay.remove());
+            });
+        });
+ 
+        // إضافة تأثير التحميل للصور
+        window.addEventListener('load', () => {
+            document.querySelectorAll('img').forEach(img => {
+                img.style.opacity = '0';
+                img.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => img.style.opacity = '1', 100);
+            });
+        });
+    </script>
+</body>
+</html>
